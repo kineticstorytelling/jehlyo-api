@@ -1,0 +1,21 @@
+<form class='bg-gray-200 bg-opacity-50' method="POST" action="{{ url_for('auth.signup') }}">
+    {{ form.hidden_tag() }}
+
+
+    <fieldset id="email-field">
+        {{ form.email.label }}
+        <br>
+        {{ form.email(class = "bg-gray-200 bg-opacity-30 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", placeholder = 'place email here ') }}
+    </fieldset>
+
+    <fieldset id="pass-field">
+        {{ form.password.label }}
+        <br>
+        {{ form.password(class = "bg-gray-200 bg-opacity-30 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", placeholder = "Place password here ") }}
+    </fieldset>
+
+        <!-- Submit button area -->
+   {{ form.submit_button(class = "bg-gray-800 text-yellow-100 hove r:text-yellow-700 hover:bg-blue-700 mt-4 py-2 px-4 rounded focus:outline-none focus:shadow-outline") }}
+
+</form>
+

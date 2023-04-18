@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <main class="hero w-full p-5">
+        <div class="row mx-auto p-4 w-1/4 rounded bg-gray-200 bg-opacity-50">
+                <h2 class="font-bold m-5 bg-gray-200 bg-opacity-30 max-w-xl text-4xl">Create Your Account</h2>
+                <br>
+                {% include 'forms.html' %}
+        </div>
+    </main>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main class="hero p-5">
+    <div class="row mx-auto p-4 w-1/4 rounded bg-gray-200 bg-opacity-50">
+        <aside class="col-12 col-md-6">
+            <h2 class="text-3xl font-bold mb-3 m-5 bg-gray-200 bg-opacity-30 max-w-xl">Sign In</h2> 
+           <form action="" method="POST"> 
+                {{ form.hidden_tag() }}
+                <fieldset id="email-field">
+                    {{ form.email.label }}
+                    <br>
+                    {{ form.email(class = "bg-gray-200 bg-opacity-30 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", placeholder = 'place email here ') }}
+                </fieldset>
+          
+                <fieldset id="pass-field" class="text-warning">
+                    {{ form.password.label }}
+                    <br>
+                    {{ form.password(class = 'bg-gray-200 bg-opacity-30 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline', placeholder = 'Enter Password ') }}
+                </fieldset>
+                {{ form.submit_button(class = "bg-gray-800 text-yellow-100 hove r:text-yellow-700 hover:bg-blue-700 mt-4 py-2 px-4 rounded focus:outline-none focus:shadow-outline") }}
+                </div>
+            </form>
+
+</main>
+
+{% endblock %}
+
